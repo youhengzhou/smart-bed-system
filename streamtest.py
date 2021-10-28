@@ -1,9 +1,13 @@
 import datetime
 import jsonengine.main as eng
 
-eng.create({},'testdatabase1') # this creates a new database
-i = 0 # i is the database entry id
+if eng.retrieve('testdatabase1') == False:
+    eng.create({},'testdatabase1') # this creates a new database
+    eng.update({'___entry_number':0},'testdatabase1') # this updates the database
+
+i = eng.retrieve_k('___entry_number','testdatabase1') # i is the database entry id
 sel = '' # the placeholder information we input
+
 while (sel != 'q' and 'quit' and 'exit'):
     sel = input('\n> ')
     eng.patch(
@@ -13,5 +17,7 @@ while (sel != 'q' and 'quit' and 'exit'):
         'data':str(sel)}
         
         },'testdatabase1')
+
     i += 1
+    eng.patch({'___entry_number':i},'testdatabase1') # updates the database id for the next available spot
     
