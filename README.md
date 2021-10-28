@@ -3,7 +3,7 @@ Smart Bed System
 
 # streamtest.py
 
-to run, first run
+To run, first install python requirements package `jsonengine` with pip:
 
 `py -m pip install jsonengine`
 
