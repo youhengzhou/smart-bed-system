@@ -11,7 +11,7 @@ sel = '' # the placeholder information we input
 while (sel != 'q' and 'quit' and 'exit'):
     sel = input('\n> ')
 
-    if sel == 'del': # delete command, note, you must run vscode in administrator mode for this
+    if sel == 'del': # delete command, note, you (should) run vscode in administrator mode for this
         eng.delete('testdatabase1')
         print('\nDatabase deleted!')
         break
