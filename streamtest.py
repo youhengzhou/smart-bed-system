@@ -3,9 +3,9 @@ import jsonengine.main as eng
 
 if eng.retrieve('testdatabase1') == False:
     eng.create({},'testdatabase1') # this creates a new database
-    eng.update({'___entry_number':0},'testdatabase1') # this updates the database
+    eng.update({'___total_entry_numbers':0},'testdatabase1') # this updates the database
 
-i = eng.retrieve_k('___entry_number','testdatabase1') # i is the database entry id
+i = eng.retrieve_k('___total_entry_numbers','testdatabase1') # i is the database entry id
 sel = '' # the placeholder information we input
 
 while (sel != 'q' and 'quit' and 'exit'):
