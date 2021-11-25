@@ -1,0 +1,5 @@
+Mongo Atlas
+    email: stonkproject@yandex.ru
+    password: stonk123
+
+ 
